@@ -60,7 +60,7 @@
                   <div class="max-w-[800px]">
                     <h1 class="mb-1 lg:mb-5 text-2xl lg:text-5xl font-extrabold">End-to-End Travel with <br><span class="text-[#1DD100]">Mother's Blessing <br> Transportation</span></h1>
                     <p class="mb-5 lg:mb-5 mx-5 lg:mx-32 font-normal">Experience seamless end-to-end travel with P Paribahan. From booking tickets to reaching your destination, we ensure comfort and convenience throughout.</p>
-                    <button class="btn btn-sm border-none  lg:h-11 lg:w-24  bg-[#1DD100] text-black">Buy Tickets</button>
+                   <a  class="btn btn-sm border-none lg:h-11 lg:w-24  bg-[#1DD100] text-black" href="#ticket-section">Buy Tickets</a>
 
                     <div class=" mt-[90px] lg:flex justify-evenly">
                         <button class="btn btn h-20 shadow-[#1DD100] shadow-md">
@@ -193,7 +193,7 @@
                     <img class="lg:h-[300px] -mt-7" src="images/info-devider.png" alt="">
                     <div class="text-center">
                         <img class="mx-auto" src="images/fare.png" alt="">
-                        <h3 class="text-3xl">550 Taka</h3>
+                        <h3 class="text-3xl"><span id="fare">550 </span> Taka</h3>
                         <p class="text-lg">Per Seat</p>
                     </div>
                 </div>
@@ -220,21 +220,20 @@
                         <hr class="border-dashed">
                     </div>
                    <div class="flex my-3 justify-end">
-                        <kbd class="kbd "><img src="images/steering-wheel.svg" alt="">
+                        <kbd class="kbd btn btn-sm"><img class="" src="images/steering-wheel.svg" alt="">
                         </kbd>
                    </div>
                     
                     <div class="flex justify-between">
-
-                        <div>
+                        <div id="first">
                             <kbd class="pr-5">A</kbd>
                             
-                            <kbd class="kbd btn btn-sm add-btn mx-5 w-16">A1</kbd>
-                            <kbd class="kbd btn btn-sm add-btn w-16">A2</kbd>
+                            <kbd id="A1 " class="kbd btn btn-sm add-btn mx-5 w-16">A1</kbd>
+                            <kbd id="A2" class="kbd btn btn-sm add-btn w-16">A2</kbd>
                         </div>
                         <div>
-                            <kbd class="kbd btn btn-sm add-btn mx-5 w-16">A3</kbd>
-                            <kbd  class="kbd btn btn-sm add-btn w-16">A4</kbd>
+                            <kbd id="A3 " class="kbd btn btn-sm add-btn mx-5 w-16">A3</kbd>
+                            <kbd id="A4 "  class="kbd btn btn-sm add-btn w-16">A4</kbd>
                         </div>
                     </div>
                         
@@ -243,12 +242,12 @@
                         <div>
                             <kbd class="pr-5">B</kbd>
                             
-                            <kbd class="kbd btn btn-sm add-btn mx-5 w-16">B1</kbd>
-                            <kbd class="kbd btn btn-sm add-btn w-16">B2</kbd>
+                            <kbd id="B1 " class="kbd btn btn-sm add-btn mx-5 w-16">B1</kbd>
+                            <kbd id="B2 " class="kbd btn btn-sm add-btn w-16">B2</kbd>
                         </div>
                         <div>
-                            <kbd class="kbd btn btn-sm add-btn mx-5 w-16">B3</kbd>
-                            <kbd class="kbd btn btn-sm add-btn w-16">B4</kbd>
+                            <kbd id="B3 " class="kbd btn btn-sm add-btn mx-5 w-16">B3</kbd>
+                            <kbd id="B4 " class="kbd btn btn-sm add-btn w-16">B4</kbd>
                         </div>
                     </div>
 
@@ -266,10 +265,8 @@
                         </div>
                     </div>
                     <div class="flex mt-3 justify-between">
-
                         <div>
                             <kbd class="pr-5">D</kbd>
-                            
                             <kbd class="kbd mx-5 w-16">D1</kbd>
                             <kbd class="kbd w-16">2</kbd>
                         </div>
@@ -332,16 +329,16 @@
                     </div>
                     <div class="flex mt-3 justify-between">
 
-                        <div>
-                            <kbd class="pr-5">I</kbd>
-                            
-                            <kbd class="kbd mx-5 w-16">I1</kbd>
-                            <kbd class="kbd w-16">I2</kbd>
-                        </div>
-                        <div>
-                            <kbd class="kbd mx-5 w-16">I3</kbd>
-                            <kbd class="kbd w-16">I4</kbd>
-                        </div>
+                    <div>
+                        <kbd class="pr-5">I</kbd>
+                        
+                        <kbd class="kbd mx-5 w-16">I1</kbd>
+                        <kbd class="kbd w-16">I2</kbd>
+                    </div>
+                    <div>
+                        <kbd class="kbd mx-5 w-16">I3</kbd>
+                        <kbd class="kbd w-16">I4</kbd>
+                    </div>
                     </div>
                     <div class="flex mt-3 justify-between">
 
@@ -359,7 +356,7 @@
                 </div>
 
                 <!-- right side -->
-                <div class="lg:flex  lg:w-[460px]">
+                <div id="ticket-section" class="lg:flex  lg:w-[460px]">
                     <div class="divider lg:divider-horizontal my-5"></div> 
                     <div class="">
                         <h3 class="lg:text-3xl pt-5 font-medium">Purchase Tickets</h3>
@@ -367,58 +364,70 @@
 
                         <div class="bg-[#F7F8F8] w-[300px] lg:w-[400px] p-2 rounded-lg">
                             <div class="flex justify-between  my-3">
-                                <p class="font-semibold">Seat</p>
-                                <p class="font-semibold">Class</p>
+                                <p class="font-semibold">Seat <span id="ticket-seat" class="bg-green-500 rounded-full"></span></p>
+                                <p class="font-semibold mr-5">Class</p>
                                 <p class="font-semibold">Price</p>
                             </div>
-                            <div  class="flex justify-between  my-3">
-                                <p id="purchase-r-one" class="font-semibold">C2</p>
-                                <p class="font-semibold">Economoy</p>
-                                <p class="font-semibold">550</p>
+
+                            
+
+                            <div id="selected-container"  class="grid grid-cols-3 text-center -mx-16">
+                               
                             </div>
-                            <div class="flex justify-between  my-3">
-                                <p id="purchase-r-two" class="font-semibold">C2</p>
-                                <p class="font-semibold">Economoy</p>
-                                <p class="font-semibold">550</p>
-                            </div>
+
+
+
                             <div class="divider"></div> 
                             <div class="flex justify-between  my-3">
                                 <p class="font-semibold">Total Price</p>
-                                <p class="font-semibold">BDT 1100</p>
+                                <p class="font-semibold">BDT <span id="total-price">1100</span></p>
                             </div>
                             <hr>
                             <label class="input mt-4 flex items-center gap-2">
-                                <input type="text" class="grow" placeholder="Have any copupon?" />
-                                <span class="btn btn-sm bg-[#1DD100] text-white">Apply</span>
+                                <input id="coupon-code" type="text" class="grow" placeholder="Have any copupon?" />
+                                <span id="apply-coupon-btn" class="btn btn-sm bg-[#1DD100] text-white">Apply</span>
                               </label>
                               <div class="flex justify-between  my-3">
                                 <p class="font-semibold">Grand Total </p>
-                                <p class="font-semibold">BDT 1100</p>
+                                <p class="font-semibold">BDT <span id="grand-total">1100</span></p>
                             </div>
                         </div>
-                        <div class="w-[300px] lg:w-[400px]  rounded-lg">
+                        <div class="w-[300px] lg:w-[400px]  rounded-lg passenger">
                             <div class="">
-                                <h3 class="font-semibold py-2">Passenger Name</h3>
+                                <h3 id="passenger-name" class="font-semibold py-2">Passenger Name</h3>
                                 <label class="input lg:w-[400px] input-bordered flex items-center gap-2">
                                     <input type="text" class="grow" placeholder="Enter your name" />
                                   </label>
                             </div>
-                            <div class="">
+                            <div id="phone-number" class="phone">
                                 <h3 class="font-semibold py-2">Phone Number</h3>
                                 <label class="input lg:w-[400px] input-bordered flex items-center gap-2">
                                   <input type="text" class="grow" placeholder="Enter your phone number" />
                                 </label>
                             </div>
-                            <div class="">
+                            <div id="email-id" class="email">
                                 <h3 class="font-semibold py-2">Email ID</h3>
                                 <label class="input lg:w-[400px] input-bordered flex items-center gap-2">
                                   <input type="text" class="grow" placeholder="Enter your email id" />
                                 </label>
                             </div>
-                             <div class="my-3">
-                                 <button class="btn btn-wide bg-[#1DD100] text-white lg:w-[400px] font-semibold">Next</button>
-                             </div>
+                <div class="my-3">
+                        <button id="submit-button" class="btn-wide hidden h-12 rounded-lg bg-[#1DD100] text-white lg:w-[400px] font-semibold" onclick="my_modal_1.showModal()">Next
+                        </button>
+                            <dialog id="my_modal_1" class="modal">
+                              <div class="modal-box">
+                                <h3 class="font-bold pt-5 text-lg text-center text-[#1DD100]">SUCCESS</h3>
+                                <p class="pt-5 px-7 font-medium">Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you. Shortly you will find a confirmation in your email.</p>
+                              <div class="modal-action mr-36 ">
+                          <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn rounded-full bg-[#1DD100] text-white w-40">Continue</button>
+                            </form>
+                                </div>
+                            </div>
+                            </dialog>
                         </div>
+                    </div>
                         <div class="flex justify-evenly -ml-12  my-3">
                             <a class="link font-medium">Terms and Conditions</a>
                             <a class="link font-medium">Cancellation Policy</a> 
@@ -462,21 +471,10 @@
     </section>
     <!--footer section end  -->
     <!-- modal -->
-    <div class="hidden">
-        <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
-            <dialog id="my_modal_1" class="modal">
-            <div class="modal-box">
-                <h3 class="font-bold text-lg">Hello!</h3>
-                <p class="py-4">Press ESC key or click the button below to close</p>
-                <div class="modal-action">
-                <form method="dialog">
-                    <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn">Close</button>
-                </form>
-                </div>
-            </div>
-            </dialog>
-    </div>
+    <footer id="modal">
+        
+    </footer>
+    
     <!-- main section end -->
 
     <!-- script link -->
