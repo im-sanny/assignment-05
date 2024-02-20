@@ -50,12 +50,11 @@ for (const btn of allSmBtn) {
 for (const btn of allSmBtn) {
     btn.addEventListener('click', function () {
         const clickCount = parseInt(this.getAttribute('data-clicks')) || 0; // Get the current click count from data attribute
-        if (clickCount >= 4) {
+        if (clickCount >= 1) {
             // If the button has been clicked four or more times, show an alert
-            alert("You can't buy more than 4 tickets.");
+            alert("You can't buy one seat twice");
             return; // Exit the function to prevent further execution
         }
-
         // Increment the click count and update the data attribute
         const updatedClickCount = clickCount + 1;
         this.setAttribute('data-clicks', updatedClickCount);
