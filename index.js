@@ -8,6 +8,7 @@ for (const btn of allSmBtn) {
         count--;
         setInnerText('fortySeats', count);
 
+
         // Add button name to tickets container
         const ticketContainer = document.getElementById('selected-container');
         const buttonName = e.target.innerText.trim(); // Get the inner text of the clicked button
@@ -33,11 +34,20 @@ for (const btn of allSmBtn) {
     });
 }
 
+const ticketContainer = document.getElementsByClassName('add-btn');
+for (let i = 0; i < ticketContainer.length; i++) {
+    
+    ticketContainer[i].addEventListener('click', function () {
+        this.style.backgroundColor = '#1DD100';
+    });
+}
+
+
 // Default function to set inner text
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
 }
-
+ 
 let seatCount = 0;
 for (const btn of allSmBtn) {
     btn.addEventListener('click', function () {
@@ -60,7 +70,7 @@ for (const btn of allSmBtn) {
         this.setAttribute('data-clicks', updatedClickCount);
 
         // Add the background color class
-        this.classList.add('bg-[#1DD100]');
+        // this.classList.add('bg-[#1DD100]');
         
         // Calculate total value
         calculateTotal();
